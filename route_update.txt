@@ -1,0 +1,22 @@
+{
+     "Comment": "Creating Alias resource record sets in Route 53",
+     "Changes": [{
+                "Action": "UPSERT",
+                "ResourceRecordSet": {
+                            "Name": "httpd-maksimvakulenko.ping-fuji.com",
+                            "Type": "A",
+                            "AliasTarget":{
+                                    "HostedZoneId": "Z18D5FSROUN65G",
+                                    "DNSName": "a6e4e7c7e58384487aaf784a5f1b9412-2069570988.us-west-2.elb.amazonaws.com",
+                                    "EvaluateTargetHealth": false
+                              }}
+                          }]
+}
+
+
+aws route53 get-hosted-zone --id Z18D5FSROUN65G
+aws route53 get-hosted-zone --id Z06224173B7VHTT03FQWR
+
+aws route53 change-resource-record-sets --hosted-zone-id Z18D5FSROUN65G --change-batch file://route.json
+
+Z1H1FL5HABSF5	Z18D5FSROUN65Gv
