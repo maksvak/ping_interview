@@ -13,10 +13,3 @@
                           }]
 }
 
-
-aws route53 get-hosted-zone --id Z18D5FSROUN65G
-aws route53 get-hosted-zone --id Z06224173B7VHTT03FQWR
-
-aws route53 change-resource-record-sets --hosted-zone-id Z18D5FSROUN65G --change-batch file://route.json
-
-Z1H1FL5HABSF5	Z18D5FSROUN65Gv
